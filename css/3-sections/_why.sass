@@ -1,0 +1,49 @@
+.section#why
+	background-color: $dark-blue
+	color: $cream
+	padding: 0
+	overflow: hidden
+
+	.wrapper
+		padding: 3rem 1rem
+		
+		img
+			position: absolute
+			bottom: 0
+			right: 0
+			max-height: 90%
+			+tablet
+				right: -13%
+				max-height: 84%
+				opacity: 0.4
+			+mobile
+				max-width: 130%
+
+		h3
+			color: $cream
+			position: relative
+			z-index: 1
+			text-align: center
+			margin-bottom: 4rem
+		
+		.content
+			direction: ltr
+			position: relative
+			z-index: 1
+
+			p
+				width: 28rem
+				max-width: 100%
+				+desktop
+					margin-left: 4rem
+				+tablet
+					margin-left: 0
+
+				span
+					color: $blue
+					font-size: 2rem
+					float: right
+					margin-bottom: 3rem
+					margin-left: 1.5rem
+					+mobile
+						margin-left: 1rem

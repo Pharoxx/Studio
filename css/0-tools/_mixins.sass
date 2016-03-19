@@ -1,0 +1,38 @@
+/* check if mobile view */
+@mixin desktop()
+	@media screen and (min-width: 1152px)
+		@content
+
+@mixin tablet()
+	@media screen and (max-width: 1152px)
+		@content
+
+@mixin mobile()
+	@media screen and (max-width: 740px)
+		@content
+
+/* shortand for width, height, position, top, right, bottom, left */
+@mixin define($w: auto, $h: auto, $p: static, $t: auto, $r: auto, $b: auto, $l: auto)
+	width: $w
+	height: $h
+	position: $p
+	top: $t
+	right: $r
+	bottom: $b
+	left: $l
+
+/* shorthand for background-color, color on static state and on hover state */
+@mixin colors($background-color, $color, $hover-background-color: $background-color, $hover-color: $color)
+	background-color: $background-color
+	color: $color
+	&:hover
+		background-color: $hover-background-color
+		color: $hover-color
+
+/* autoprefixer, takes key and value, only prefixes keys. not values. */
+@mixin autoprefix($key, $value)
+	-webkit-#{$key}: #{$value}
+	-ms-#{$key}: #{$value}
+	-moz-#{$key}: #{$value}
+	-o-#{$key}: #{$value}
+	#{$key}: #{$value}

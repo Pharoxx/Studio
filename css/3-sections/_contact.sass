@@ -1,0 +1,78 @@
+.section#contact
+	background-color: $dark-blue
+	color: $cream
+	padding: 0
+	
+	.wrapper
+		@extend %clearfix
+		position: relative
+		padding: 3rem 10rem
+		overflow: hidden
+		+tablet
+			padding: 3rem 1rem
+
+	img
+		position: absolute
+		bottom: 0
+		max-height: 90%
+		left: 10rem
+		+tablet
+			left: 0
+		+mobile
+			left: -20%
+			opacity: 0.3
+
+	h3
+		margin-bottom: 4rem
+		text-align: center
+		position: relative
+		z-index: 1
+
+	.item
+		position: relative
+		z-index: 1
+		@extend %clearfix
+		padding-bottom: 1rem
+		input, textarea
+			outline: none
+			float: right
+			width: 16rem
+			height: 2rem
+			padding: 0 0.5rem
+			resize: none
+			background-color: $cream
+			border: 0px transparent
+			font-size: 1rem
+			+mobile
+				opacity: 0.6
+
+		p
+			float: right
+			width: 4rem
+			display: block
+			height: 2rem
+			line-height: 2rem
+			font-family: $sans
+			+mobile
+				text-align: right
+
+		textarea
+			outline: none
+			font-family: $sans
+			height: 6rem
+			padding: 0.5rem
+			font-size: 1rem
+			+mobile
+				opacity: 0.6
+
+	.submit
+		position: relative
+		display: inline-block
+		padding: 0.5rem 2rem
+		background-color: $blue
+		color: $cream
+		margin: 1rem 4rem 0 0
+		font-weight: bold
+		+autoprefix("transition", "all 0.25s ease-out")
+		&:hover
+			background-color: darken($blue, 15%)

@@ -1,0 +1,50 @@
+.section#features
+	background-color: $cream
+
+	.cube:nth-child(1) .imgContainer
+		background-image: url('../img/features/technolegies.png')
+	.cube:nth-child(2) .imgContainer
+		background-image: url('../img/features/responsive.png')
+	.cube:nth-child(3) .imgContainer
+		background-image: url('../img/features/social.png')
+	.cube:nth-child(4) .imgContainer
+		background-image: url('../img/features/cms.png')
+
+
+	.wrapper
+
+		.cube
+			position: relative
+			float: right
+			+desktop
+				margin-left: 4rem
+				width: 14.5rem
+				height: 18.5rem
+				&:last-child
+					margin-left: 0
+			+tablet
+				margin-left: 3rem
+				margin-bottom: 3rem
+				width: 20rem
+				height: 15rem
+				&:nth-child(2), &:nth-child(4)
+					margin-left: 0
+			+mobile
+				width: 100%
+				height: auto
+				margin-bottom: 1rem
+
+			
+			.imgContainer
+				background-position: center
+				background-size: contain
+				background-repeat: no-repeat
+				height: 4.5rem
+				margin: 1rem auto
+
+			p.text
+				padding: 1rem
+				font-family: $sans
+				color: $almost-black
+				text-align: center
+				
