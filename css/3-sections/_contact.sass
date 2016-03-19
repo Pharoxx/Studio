@@ -73,6 +73,17 @@
 		color: $cream
 		margin: 1rem 4rem 0 0
 		font-weight: bold
+		cursor: pointer
 		+autoprefix("transition", "all 0.25s ease-out")
 		&:hover
 			background-color: darken($blue, 15%)
+
+	.error
+		display: block
+		clear: both
+		margin-right: 61px
+		padding: 8px 0px
+		color: $almost-black
+		position: relative
+		&.hidden
+			display: none

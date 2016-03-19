@@ -3,6 +3,9 @@ $(document).ready(function(){
 	fixHeaderJitterOnMobile();
 	setupScrollers($(".header .cta"), "#contact");
 	init_faq_section();
+	$('.submit').click(function(){
+		sendMail();
+	});
 });
 
 function parallax(){
@@ -104,4 +107,34 @@ function init_faq_section(){
 			$('.answer span').remove();
 		});
 	});
+}
+
+function sendMail(){
+	$name = $('#name').val()
+	$phone = $('#phone').val();
+	$email = $('#email').val();
+	$msg = $('#message').val();
+	$error = false;
+
+	if($phone == "" && $email == ""){
+		// handle error
+		$('.error').removeClass('hidden');
+		$error = true;
+	}
+
+	if($error == false){
+		$('.error').addClass('hidden');
+		xURL = 'mailer.php?name=' + $name + '&phone=' + $phone + '&email=' + $email + '&msg=' + $msg;
+		$.ajax( xURL )
+			.done(function() {
+				alert( "הודעתך נשלחה" );
+				$('#name').val('');
+				$('#phone').val('');
+				$('#email').val('');
+				$('#message').val('');
+			})
+			.fail(function() {
+				alert( "ארעה שגיאה" );
+			});
+	}
 }

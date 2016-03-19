@@ -1,3 +1,8 @@
+#Sass
+*.sass-cache*
+**/.sass-cache
+**.sass-cache**
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
